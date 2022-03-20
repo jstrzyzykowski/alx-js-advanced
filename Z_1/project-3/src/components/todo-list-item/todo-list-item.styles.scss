@@ -1,0 +1,41 @@
+.todoListItem {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    background-color: rgba(0,0,0,0.05);
+    border-radius: 6px;
+    padding: 10px;
+    position: relative;
+    min-height: 40px;
+
+    &:last-of-type {
+        margin-bottom: 0;
+    }
+
+    input {
+        margin-right: 5px;
+    }
+
+    &__name {
+        font-size: 14px;
+
+        &.completed {
+            text-decoration: line-through;
+        }
+    }
+
+    &__removeBtn {
+        margin-left: auto;
+        border: none;
+        background-color: #E64953;
+        height: 30px;
+        min-width: 30px;
+        border-radius: 4px;
+        cursor: pointer;
+
+        i {
+            color: whitesmoke;
+        }
+
+    }
+}
