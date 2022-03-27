@@ -1,0 +1,46 @@
+.messageForm {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+
+  &__nameContainer {
+    display: flex;
+    margin-bottom: 10px;
+
+    input {
+      flex-grow: 1;
+      margin-right: 10px;
+      padding: 5px 10px;
+      border: 1px solid #ececec;
+    }
+
+    & + .errorNotificationContainer {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__messageContainer {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #ececec;
+    margin-bottom: 10px;
+
+    textarea {
+      resize: none;
+      padding: 5px 10px;
+      border: none;
+    }
+
+    &-optionContainer {
+      padding: 5px;
+      display: flex;
+      flex-direction: column;
+
+      &-controllers {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+    }
+  }
+}

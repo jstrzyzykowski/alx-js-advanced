@@ -1,11 +1,14 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef } from 'react';
+
+import {useSelector} from 'react-redux';
+import {RootState} from '../../redux/root.reducer';
 
 import MessageListItem from '../message-list-item/message-list-item.component';
 
 import './message-list.styles.scss';
 
 export default function MessageList() {
-  const [messages] = useState([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
+  const { messages } = useSelector((state: RootState) => state.message);
   const messagesEndRef = useRef(null);
 
   const scrollToBottom = () => {
@@ -17,12 +20,10 @@ export default function MessageList() {
     scrollToBottom();
   }, [messages]);
 
-  const tmp = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-
   return (
     <div className="messageListContainer">
-      {tmp.map((number) => (
-        <MessageListItem key={number} />
+      {messages.map(message => (
+        <MessageListItem key={message.id} {...message}/>
       ))}
       <div ref={messagesEndRef} />
     </div>

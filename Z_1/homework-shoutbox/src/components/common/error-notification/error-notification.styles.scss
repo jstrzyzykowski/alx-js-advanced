@@ -1,0 +1,19 @@
+.errorNotificationContainer {
+  display: flex;
+  align-items: center;
+  background-color: #ffeaea;
+  padding: 5px 10px;
+  border-radius: 4px;
+
+  i {
+    margin-right: 5px;
+    font-size: 13px;
+    color: #EF706F;
+  }
+
+  &__text {
+    font-size: 13px;
+    color: #C96463;
+    font-weight: bold;
+  }
+}

@@ -1,6 +1,6 @@
 .shoutboxContainer {
   position: relative;
-  min-height: 100%;
+  height: 100%;
   display: flex;
   flex-direction: column;
 
@@ -13,7 +13,7 @@
     background-color: #ececec;
     display: flex;
     align-items: center;
-    padding: 0 30px;
+    padding: 0 10px;
 
     &-brandContainer {
       display: flex;
@@ -24,7 +24,6 @@
         top: -5px;
         left: 0;
         font-size: 21px;
-        //width: 30px;
         transform: scaleX(-1);
       }
 
@@ -39,16 +38,10 @@
   &__body {
     margin-top: 60px;
     flex-grow: 1;
-    padding: 30px;
-
-    display: grid;
-    grid-template-rows: 70% 1fr;
-    row-gap: 20px;
+    height: calc(100% - 60px - 40px);
+    display: flex;
+    flex-direction: column;
     background-color: #F9FAFB;
-
-    &-formContainer {
-      background-color: lightseagreen;
-    }
   }
 
   &__footer {

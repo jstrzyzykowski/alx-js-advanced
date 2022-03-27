@@ -1,22 +1,26 @@
 import React from 'react';
 
+import moment from 'moment';
+
+import { Message } from '../../redux/message/message.actions';
+
 import Avatar from '../../assets/images/avatar.jpg';
 
 import './message-list-item.styles.scss';
 
-export default function MessageListItem() {
+export default function MessageListItem({author, createdAt, text}: Message): React.ReactElement {
+
   return (
     <div className="messageContainer">
       <div className="messageContainer__header">
         <div className="messageContainer__header-avatarContainer">
-          <img src={Avatar} alt="John Doe avatar" />
+          <img src={Avatar} alt={`${author} avatar`} />
         </div>
-        <p className="messageContainer__header-date">[21/01 15:35]</p>
-        <p className="messageContainer__header-author">JohnDoe:</p>
+        <p className="messageContainer__header-date">[{moment(createdAt).format('MM/D HH:mm:ss')}]</p>
+        <p className="messageContainer__header-author">{author}:</p>
       </div>
       <p className="messageContainer__message">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto
-        maiores ullam voluptatum!
+        {text}
       </p>
     </div>
   );

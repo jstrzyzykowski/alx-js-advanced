@@ -1,0 +1,15 @@
+.customButton {
+  height: 34px;
+  padding: 0 16px;
+  border-radius: 4px;
+  border: none;
+  background-color: #5348E9;
+  color: whitesmoke;
+  cursor: pointer;
+
+  &.outline {
+    background-color: #FFFFFF;
+    border: 1px solid #D1D5DB;
+    color: #6C7281;
+  }
+}
